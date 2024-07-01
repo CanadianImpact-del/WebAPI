@@ -1,15 +1,32 @@
-###
-GET http://localhost:3000/api/orders
-
-###
-POST  http://localhost:3000/api/orders
+### Create a new order
+POST http://localhost:3000/api/orders
 Content-Type: application/json
 
 {
-    "size":"large", "toppings":["cheese"], "quantity": 1
+  "size": "large",
+  "toppings": ["pepperoni", "mushrooms"],
+  "quantity": 2
 }
 
-###
+### List all orders
+GET http://localhost:3000/api/orders
 
-GET http://localhost:3000/books/9d9f45e3-557f-487f-9247-8a70f255b681
+### Get a specific order
+GET http://localhost:3000/api/orders/{orderId}
 
+### Update an order
+PUT http://localhost:3000/api/orders/{orderId}
+Content-Type: application/json
+
+{
+  "size": "medium",
+  "toppings": ["sausage", "peppers"],
+  "quantity": 1
+}
+
+### Delete an order
+DELETE http://localhost:3000/api/orders/{orderId}
+
+### Complete an order
+POST http://localhost:3000/api/orders/{orderId}/complete 
+Authorization: Basic admin:password
