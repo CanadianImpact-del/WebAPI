@@ -1,0 +1,15 @@
+###
+GET http://localhost:3000/api/orders
+
+###
+POST  http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+    "size":"large", "toppings":["cheese"], "quantity": 1
+}
+
+###
+
+GET http://localhost:3000/books/9d9f45e3-557f-487f-9247-8a70f255b681
+
